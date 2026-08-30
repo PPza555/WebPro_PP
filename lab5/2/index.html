@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB5-2</title>
+
+    <style>
+
+        body {
+            width: 80%;
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: auto;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        
+        @media screen and (max-width: 700px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media screen and (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }        
+
+        .card img {
+            width: 100%;
+            height: 65%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card p {
+            font-size: 20px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>My Dog Image Gallery</h2>
+    <div class="gallery">
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/b6/c3/1e/b6c31e420e02c7778781f2cf309b3a9a.jpg" alt="">
+            <p>Rocky</p>
+        </div>
+        
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/48/c3/42/48c342fb9c50981f42174b2a96e69fb8.jpg" alt="">
+            <p>Cooper</p>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz6R_g0GmSu8WOU45eDEwLyqkZHztDk3SZLqwOWeinEDWUyMeDo3OeqZs&s=10" alt="">
+            <p>Teddy</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.pinimg.com/474x/44/49/2e/44492ee4a67f4cc892b55d70d869c656.jpg" alt="">
+            <p>Poppy</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/1c/14/f3/1c14f3ca84067d4457bbe939613ad768.jpg" alt="">
+            <p>Mocha</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/ca/5c/e7/ca5ce757c16c8e9d2cc7e7b36fbde19e.jpg" alt="">
+            <p>Candy</p>
+        </div>
+
+        <div class="card">
+            <img src="https://img.magnific.com/free-photo/adorable-corgi-dog-lying-blue-couch_651396-2775.jpg?semt=ais_test_b&w=740&q=80" alt="">
+            <p>Hazel</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/15/aa/93/15aa93ab14d530154cdce1dec4fecca7.jpg" alt="">
+            <p>Finn</p>
+        </div>
+        
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB6-2</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2 {
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        h4 {
+            margin: 7px;
+            font-weight: normal;
+        }
+
+        img {
+            width: 150px;
+        }
+
+        #container {
+            padding-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .card-container {
+            box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+            padding: 15px;
+            border-radius: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+    <script>
+
+        function readjsondata(data) {
+            data.forEach((student, index) => {
+                const card = document.createElement('div');
+                card.classList.add('card-container');
+
+                const img = document.createElement('img');
+
+                if (student.gender === 'Male') {
+                    img.src = 'http://webdev.it.kmitl.ac.th/labdocs/unit6/images/img_male.png';
+                }
+                else {
+                    img.src = 'http://webdev.it.kmitl.ac.th/labdocs/unit6/images/img_female.png';
+                }
+
+                const divName = document.createElement('h2');
+                const txtName = String(index + 1) + '. ' + student.name;
+                divName.textContent = txtName;
+
+                const divPhys = document.createElement('h4');
+                const txtPhys = 'Physice : ' + String(student.physics);
+                divPhys.textContent = txtPhys;
+
+                const divMath = document.createElement('h4');
+                const txtMath = 'Mathematics : ' + String(student.maths);
+                divMath.textContent = txtMath;
+
+                const divEng = document.createElement('h4');
+                const txtEng = 'English : ' + String(student.english);
+                divEng.textContent = txtEng;
+
+                card.appendChild(img);
+                card.appendChild(divName);
+                card.appendChild(divPhys);
+                card.appendChild(divMath);
+                card.appendChild(divEng);
+
+                document.getElementById('container').appendChild(card);
+            });
+
+        }
+
+        fetch('student-score.json')
+            .then(response => response.json())
+            .then(data => readjsondata(data))
+            .catch(error => console.error('error', error));
+
+    </script>
+</body>
+
+</html>

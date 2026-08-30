@@ -1,0 +1,50 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 30px;
+}
+
+th, td {
+    border: 1px solid rgb(148, 148, 148);
+    padding: 8px;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+thead {
+    background-color: lightgreen;
+}
+
+tr:nth-child(even) {
+    background-color: #efefef;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse; /* ทำให้ตารางเป็นเนื้อเดี่ยวกัน */
+    width: 500px;
+}
+
+h1 {
+    color: darkblue;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+}
+
+button {
+    margin-top: 30px;
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: lightskyblue;
+
+}
+
+button:hover {
+    background-color: rgb(52, 177, 255);
+    border: none;
+}

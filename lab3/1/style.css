@@ -1,0 +1,68 @@
+/* CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin-bottom: 10px;
+    display: block;
+    width: 250px;
+    height: 30px;
+
+    padding: 0 12px;
+    border: 1.5px solid #d0d7de;
+    border-radius: 5px;
+    font-size: 8px;
+}
+
+::placeholder {
+    color: rgb(180, 180, 180);
+}
+
+button {
+    height: 30px;
+    width: 275px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: skyblue;
+    text-align: center;
+    transition: skyblue 0.3s, transform 0.2s;
+}
+    
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 340px;
+    padding: 40px 45px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: darkblue;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+button:hover{
+    background: #59a9ff;
+}

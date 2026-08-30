@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB5-4</title>
+
+    <style>
+
+        body {
+            width: 80%;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #fafafa;
+            margin: auto;
+            margin-top: 70px;
+
+        }
+
+        section, footer {
+            scroll-margin-top: 70px;
+        }
+
+        footer {
+            margin-bottom: 70px ;
+        }
+        
+        a {
+            text-decoration: none;
+            color: darkblue;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 25%;
+            border-radius: 15%;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .skills-item {
+            background-color: white;
+            padding: 5%;
+            border-radius: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3) ;
+        }
+
+        .top-item {
+            font-family: monospace;
+            color: #888;
+            margin: 0 0 8px;
+        }
+
+        @media screen and (min-width: 600px) and (max-width: 992px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile img {
+                order: -1;
+            }
+
+            img {
+                width: 50%;
+                border-radius: 15%;
+            }
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 14px 5%;
+            z-index: 100;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15) ;
+        }
+
+        .navbar p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .navbar a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar div {
+            display: flex;
+            gap: 24px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    
+    <nav class="navbar">
+        <p>Panupong</p>
+        <div>
+            <a href="#about">เกี่ยวกับฉัน</a>
+            <a href="#skills">ทักษะ</a>
+            <a href="#contact">ติดต่อ</a>
+        </div>
+    </nav>
+
+    <header class="profile">
+        <div>
+            <p>$ IT KMITL</p>
+            <h1>Panupong Namwiset</h1>
+            <p>─ 68070137 DSBA</p>
+        </div>
+        <img src="PP.jpg">
+    </header>
+
+    <section class="about" id="about">
+        <h2>🏖️ เกี่ยวกับฉัน</h2>
+        <p>กำลังเรียนรู้การพัฒนาเว็ปไซต์แบบ front-end อยู่ที่ IT KMITL ชอบเขียน HTML/CSS
+            ให้เว็บไซต์ใช้งานได้ดีทั้งบนมือถือและเดสก์ท็อป</p>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>💻 ทักษะ</h2>
+        <div class="skills-grid">
+            <div class="skills-item">
+                <p class="top-item">&lt;html&gt;</p>
+                <h3>HTML</h3>
+                <p>โครงสร้างเนื้อหาแบบ semantic</p>
+            </div>
+            
+            <div class="skills-item">
+                <p class="top-item">.css{}</p>
+                <h3>CSS</h3>
+                <p>Flexbox, Grid, Media Query</p>
+            </div>
+            
+            <div class="skills-item">
+                <p class="top-item">fn()</p>
+                <h3>JavaScript</h3>
+                <p>DOM และ interactive พื้นฐาน</p>
+            </div>
+            
+            <div class="skills-item">
+                <p class="top-item">Computer [|]</p>
+                <h3>Responsive Design</h3>
+                <p>ออกแบบแบบ mobile-first</p>
+            </div>
+
+            <div class="skills-item">
+                <p class="top-item">🎨</p>
+                <h3>UI Design</h3>
+                <p>ออกแบบ UI เบื้องต้นด้วย Figma</p>
+            </div>
+
+            <div class="skills-item">
+                <p class="top-item">SELECT *</p>
+                <h3>SQL Basics</h3>
+                <p>เขียนคำสั่ง query ฐานข้อมูลเบื้องต้น</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="contact" id="contact">
+        <h2>☎️ ติดต่อ</h2>
+        <a href="mailto:68070137@kmitl.ac.th">Email: 68070137@kmitl.ac.th</a><br>
+        <a href="https://www.github.com/PPza555">Github: github.com/PPza555</a><br>
+        <a href="https://www.instagram.com/pt_pxnu.gg/">Instagram: pt_pxnu.gg</a><br>
+        <a href="https://www.facebook.com/pxnugg.pp">Facebook: Panupong Namwiset</a><br>
+    </footer>
+
+
+</body>
+
+</html>

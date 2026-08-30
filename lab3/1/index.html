@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB3-1</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h2>User Registration</h2>
+
+        <form id="myForm" onsubmit="RegisterForm(); return false;">
+            <p><label for='username'>Username:</label>
+                <input type="text" id="username" name="username" />
+            </p>
+
+            <p><label for='email'>Email:</label>
+                <input type="email" id="email" name="email" placeholder="e.g., user@kmitl.ac.th" />
+            </p>
+
+            <p><label for='phone'>Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g.,0999999999" />
+            </p>
+
+            <p><label for='password'>Password:</label>
+                <input type="password" id="password" name="password" />
+            </p>
+
+            <p><label for='confirm'>Confirm Password:</label>
+                <input type="password" id="confirm" name="confirm" />
+            </p>
+
+        </form>
+        <button onclick="RegisterForm()">
+            Register
+        </button>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB6-1</title>
+
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: rgb(191, 249, 191);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: whitesmoke;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Position</th>
+                    <th>Adddress</th>
+                </tr>
+            </thead>
+            <tbody id="listTable">
+                <!-- <tr><td> list </td></tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+
+        function readjsondata(data) {
+            
+            let listTable = '';
+            data.forEach(item => {
+                listTable += '<tr>'
+                    + '<td>' + item.id  + '</td>'
+                    + '<td>' + item.FirstName + ' ' + item.LastName  + '</td>'
+                    + '<td>' + item.Gender[0]  + '</td>'
+                    + '<td>' + item.Position  + '</td>'
+                    + '<td>' + item.Address  + '</td>'
+                    + '</tr>'
+            });
+
+            document.getElementById('listTable').innerHTML = listTable;
+        }
+
+        fetch('employees.json')
+            .then(response => response.json())
+            .then(data => readjsondata(data))
+            .catch(error => console.error('error', error));
+
+    </script>
+
+</body>
+</html>

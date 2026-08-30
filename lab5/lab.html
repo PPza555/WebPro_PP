@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Document</title>
+
+<style>
+  /* display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr, (repeat(4, 1fr));
+     gap: 16px; */
+* {
+  box-sizing:border-box; 
+}
+.left {
+  background-color:#2196F3;
+  padding:20px;
+  float:left;
+  width:33%; 
+}
+.main {
+  background-color:rgb(223, 66, 66);
+  padding:20px;
+  float:left;
+  width:34%; 
+}
+.right {
+  background-color:#4CAF50;
+  padding:20px;
+  float:left;
+  width:33%; 
+}
+
+@media screen and (max-width:1000px) {
+  .left, .main, .right {
+    width:100%; 
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+    <h1>The age of dinosaurs</h1>
+    <h4>Dinosaurs lived during the Mesozoic Era, also known as the "Age of Reptiles," which spanned from approximately 252 to 66 million years ago. This era is further divided into three periods: the Triassic, Jurassic, and Cretaceous.</h4>
+    <div class="left">
+        <h1>Triassic Period</h1>
+        <img src="https://th.bing.com/th/id/OIP.2JEmpzHV7YplOXJpB_yXlAHaE8?w=270&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        <p>(252 to 201 million years ago) This period saw the initial diversification of dinosaurs, with early forms like Eoraptor and Plateosaurus.</p>
+    </div>
+
+    <div class="main">
+        <h1>Jurassic Period</h1>
+        <img src="https://th.bing.com/th/id/OIP.2JEmpzHV7YplOXJpB_yXlAHaE8?w=270&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        <p>(201 to 145 million years ago) The Jurassic is often associated with the rise of large, long-necked sauropods like Brachiosaurus and Diplodocus, as well as iconic dinosaurs like Stegosaurus and Allosaurus.</p>
+    </div>
+
+    <div class="right">
+        <h1>Cretaceous Period</h1> 
+        <img src="https://th.bing.com/th/id/OIP.2JEmpzHV7YplOXJpB_yXlAHaE8?w=270&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        <p>(145 to 66 million years ago) This period witnessed the peak of dinosaur diversity, including iconic creatures like Triceratops, Tyrannosaurus Rex, and the duck-billed dinosaurs.</p>
+    </div>
+
+</body>
+</html>

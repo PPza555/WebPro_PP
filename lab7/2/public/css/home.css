@@ -1,0 +1,33 @@
+body {
+    width: 90%;
+    margin: auto;
+}
+
+.all_manu {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.manu {
+    background-color: rgb(217, 215, 215);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 10px;
+    width: 100%;
+    height: 75%;
+}
+
+a {
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 42px;
+}

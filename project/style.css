@@ -1,0 +1,197 @@
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 20px;
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+}
+
+img {
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.img-box {
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+h2 {
+    font-size: 35px;
+    margin-top: 50px;
+}
+
+h3 {
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+ul,
+a {
+    line-height: 1.6;
+    font-size: 18px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: .2s;
+}
+
+a:hover {
+    color: #0077ff;
+    text-decoration: underline;
+}
+
+.text-box {
+    line-height: 1.6;
+    text-indent: 2em;
+    font-size: 20px;
+}
+
+.text-of-content {
+    background: lightcyan;
+    border-radius: 20px;
+    padding: 1px 30px;
+    margin: 40px 0;
+    max-width: max-content;
+}
+
+.text-of-content h2 {
+    margin-bottom: 15px;
+}
+
+#textref {
+    margin-top: 20px;
+}
+
+.toc {
+    padding-left: 20px;
+}
+
+.toc ul {
+    margin-bottom: 10px;
+    padding-left: 22px;
+}
+
+.toc li {
+    margin: 3px 0;
+}
+
+.toc a {
+    text-decoration: none;
+    color: #333;
+    transition: .2s;
+}
+
+.toc a:hover {
+    color: #d53939;
+    text-decoration: underline;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    padding: 14px 5%;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.navbar p {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar div {
+    display: flex;
+    gap: 24px;
+}
+
+.navbar a {
+    color: #222;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.navbar a:hover {
+    color: #d53939;
+    text-decoration: underline;
+}
+
+.contact {
+    padding: 30px 8%;
+    margin-top: 200px;
+    padding-bottom: 10px;
+
+    background: #1f2937;
+    color: white;
+    box-sizing: border-box;
+    
+}
+
+.contact a {
+    color: white;
+    font-size: 12px;
+}
+
+.contact p {
+    text-indent: 0;
+    font-size: 12px;
+}
+
+.contact h5 {
+    font-size: 18px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+footer {
+    width: 100%;
+}
+
+.contact {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+@media screen and (max-width: 700px) {
+    img {
+        width: 100%;
+    }
+
+    .navbar div {
+        gap: 14px;
+    }
+
+    .navbar p,
+    .navbar a {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB5-1</title>
+
+    <style>
+
+        body {
+            width: 90%;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.5;
+            margin: auto;
+        }
+
+        * {
+            box-sizing:border-box;
+        }
+
+        .box {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 30px;
+        }
+        
+        @media screen and (max-width: 700px) {
+            .box {
+                grid-template-columns: 1fr;
+
+            }
+            
+        }
+
+        .card {
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            padding:20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        a {
+            color: darkblue;
+            margin-top: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Top 10 Programming Languages to Learn in 2026</h1>
+    <p>
+        The technology industry is transforming at an unprecedented pace. From artificial intelligence and cloud
+        computing to mobile apps and cybersecurity, software development remains at the core of innovation. To stay
+        competitive, developers and students must focus on acquiring in-demand skills.
+        <br>
+        <a href="">Read more...</a>
+    </p>
+
+    <h2>Languages</h2>
+    <div class="box">
+        <div class="card">
+            <h3>Python</h3>
+            <p>
+                Python continues to lead the programming world due to its simplicity, flexibility, and vast ecosystem. It is
+                widely used in artificial intelligence,
+            </p>
+            <a href="">Read more ...</a>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>
+                JavaScript is yet another one of the backbone of modern web development. It is used to build interactive
+                websites, web apps, and even mobile and desktop applications.
+            </p>
+            <a href="">Read more ...</a>
+        </div>
+
+        <div class="card">
+            <h3>Java</h3>
+            <p>
+                Java also remains a powerhouse in enterprise-level applications, Android development, and large-scale
+                systems. Its reliability, security, and
+            </p>
+            <a href="">Read more ...</a>
+        </div>
+
+        <div class="card">
+            <h3>C++</h3>
+            <p>
+                C++ is also essential for performance-critical applications such as game development, operating systems,
+                embedded systems, and high-frequency trading platforms.
+            </p>
+            <a href="">Read more ...</a>
+        </div>
+    </div>
+<br>
+<br>
+
+
+</body>
+
+</html>

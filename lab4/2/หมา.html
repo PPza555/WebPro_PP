@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="lang" id="langlabel"></label>
+    <br>
+    <select id="lang">
+        <option value="en">English</option>
+        <option value="th">ไทย</option>
+    </select>
+
+    <div id = 'container'></div>
+
+
+    <script>
+        //สร้างข้อมูลของทั้ง 2 ภาษา
+        const text = {
+            en : {
+                selectlang : 'Language:',
+                title : 'Register',
+                fullname : 'Full Name',
+                PHfullname : 'Enter your name',
+                email : 'Email',
+                PHemail : 'Enter your email',
+                password : 'Password',
+                PHpassword : 'create a password',
+                confirm : 'Confirm Password',
+                PHconfirm : 'Confirm your password',
+                button : 'Sign Up'
+            },
+
+            th : {
+                selectlang : 'ภาษา:',
+                title : 'สมัครสมาชิก',
+                fullname : 'ชื่อ-นามสกุล',
+                PHfullname : 'กรอกชื่อของคุณ',
+                email : 'อีเมล',
+                PHemail : 'กรอกอีเมลของคุณ',
+                password : 'รหัสผ่าน',
+                PHpassword : 'สร้างรหัสผ่าน',
+                confirm : 'ยืนยันรหัสผ่าน',
+                PHconfirm : 'ยืนยันรหัสผ่านของคุณ',
+                button : 'สมัครสมาชิก'
+            }
+        };
+
+        const app = document.getElementById("container")
+        const select = document.getElementById("lang")
+        const langlabel = document.getElementById("langlabel")
+
+        function createForm(lang) {
+            app.innerHTML = "";
+            const data = text[lang];
+
+            langlabel.textContent = data.selectlang;
+
+            const form = document.createElement("form");
+
+            const h2 = document.createElement("h2");
+            h2.textContent = data.title;
+            form.appendChild(h2);
+
+            const label1 = document.createElement("label");
+            label1.textContent = data.fullname;
+            form.appendChild(label1)
+
+            const br1label = document.createElement("br");
+            form.appendChild(br1label);
+
+            const input1 = document.createElement("input");
+            input1.type = "text";
+            input1.placeholder = data.PHfullname;
+            form.appendChild(input1);
+
+            const br1 = document.createElement("br");
+            form.appendChild(br1);
+
+
+            const label2 = document.createElement("label");
+            label2.textContent = data.email;
+            form.appendChild(label2);
+
+            const br2label = document.createElement("br");
+            form.appendChild(br2label);
+
+            const input2 = document.createElement("input");
+            input2.type = "email";
+            input2.placeholder = data.PHemail;
+            form.appendChild(input2);
+
+            const br2 = document.createElement("br");
+            form.appendChild(br2);
+
+            const label3 = document.createElement("label");
+            label3.textContent = data.password;
+            form.appendChild(label3);
+
+            const br3label = document.createElement("br");
+            form.appendChild(br3label);
+
+            const input3 = document.createElement("input");
+            input3.type = "password";
+            input3.placeholder = data.PHpassword;
+            form.appendChild(input3);
+
+            const br3 = document.createElement("br");
+            form.appendChild(br3);
+
+            const label4 = document.createElement("label");
+            label4.textContent = data.confirm;
+            form.appendChild(label4);
+
+            const br4label = document.createElement("br");
+            form.appendChild(br4label);
+
+            const input4 = document.createElement("input");
+            input4.type = "password";
+            input4.placeholder = data.PHconfirm;
+            form.appendChild(input4)
+
+            const br4 = document.createElement("br");
+            form.appendChild(br4)
+
+            const button = document.createElement("button");
+            button.textContent = data.button;
+            form.appendChild(button);
+
+            app.appendChild(form);
+        }
+
+        createForm("en");
+
+        select.addEventListener("change", function(){
+            createForm(this.value);
+        });
+
+        const body = document.getElementsByTagName('body')
+    </script>
+</body>
+</html>

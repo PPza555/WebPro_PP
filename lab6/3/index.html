@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB6-3</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 90%;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 15px;
+        }
+
+        div {
+            margin-bottom: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+    <script>
+
+        function readjsondata(data) {
+            data.forEach((questions, index) => {
+                const card = document.createElement('div');
+                card.classList.add('card-question');
+
+                const divQuestion = document.createElement('h2');
+                const txtQuestion = String(index + 1) + '. ' + questions.question;
+                divQuestion.textContent = txtQuestion;
+                card.appendChild(divQuestion)
+
+                Object.keys(questions.answers).slice(0, -1).forEach(choice => {
+                    const label = document.createElement('label');
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = 'Q' + index;
+
+                    // ค่า a b c
+                    radio.value = choice;
+
+                    label.appendChild(radio);
+                    label.appendChild(document.createTextNode(' ' + choice.toUpperCase() + '. ' + questions.answers[choice]));
+                    card.appendChild(label);
+
+                    if (choice === questions.answers.correct) {
+                        radio.checked = true;
+                    };
+
+                });
+
+                document.getElementById('container').appendChild(card);
+            });
+
+        }
+
+        fetch('questionAnswerData.json')
+            .then(response => response.json())
+            .then(data => readjsondata(data))
+            .catch(error => console.error('error', error));
+
+    </script>
+
+</body>
+
+</html>

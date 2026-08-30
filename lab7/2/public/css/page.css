@@ -1,0 +1,31 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: lightgrey;
+}
+
+div {
+    margin: 10px;
+
+}
+
+img {
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    width: 20%;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 50px;
+}
+

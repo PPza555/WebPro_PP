@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB6-4</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }        
+        
+        body {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px ;
+        }
+
+        .container {
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgb(0, 0, 0, 0.2);            
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-bottom: 25px;
+            width: 100%;
+            height: 35px;
+            padding-left: 10px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        ::placeholder {
+            color: lightgray;
+        }
+
+        button {
+            display: block;
+            border: none;
+            width: 100%;
+            padding: 6px;
+            background-color: rgb(181, 227, 255);
+        }
+
+        button:hover {
+            background-color: rgb(123, 205, 255);
+        }
+
+        #dict p {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 15px auto;
+            /* margin-bottom: 15px; */
+        }
+
+        #dict button {
+            width: 60px;
+            background-color: #f66;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #dict button:hover {
+            background-color: #e60000;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>สมุดจดคำศัพท์</h1>
+        <label for="word">คำศัพท์ (word)</label>
+        <input type="text" name="word" id="word" placeholder="เช่น Banana">
+
+        <label for="mean">คำแปล (Meaning)</label>
+        <input type="text" name="mean" id="mean" placeholder="เช่น กล้วย">
+
+        <button onclick="saveWord()">บันทึกข้อมูล</button>
+
+        <h2>รายการคำศัพท์ของคุณ</h2>
+
+        <div id="dict"></div>
+    </div>
+
+    <script>
+
+        showWord();
+
+        function saveWord() {
+
+            let word = document.getElementById('word').value;
+            let mean = document.getElementById('mean').value;
+
+            // อ่านข้อมูลเดิม
+            let wordList = JSON.parse(localStorage.getItem('wordList')) || [];
+
+            // เพิ่มข้อมูลใหม่
+            wordList.push({
+                word: word,
+                mean: mean
+            });
+            
+            if (word != '') {
+                if (mean != '') {
+                // บันทึกกลับลง localStorage
+                localStorage.setItem('wordList', JSON.stringify(wordList));
+                } else {
+                alert('กรุณากรอกความหมาย') }}
+            else {
+                alert('กรุณากรอกคำศัพท์')}
+            
+            // ล้างช่องป้อน
+            document.getElementById("word").value = "";
+            document.getElementById("mean").value = "";
+            
+            showWord();
+            // alert('Save Word!!');
+        }
+
+
+        function showWord() {
+
+            let wordList = JSON.parse(localStorage.getItem('wordList')) || [];
+            console.log('wordList:', wordList);
+
+            let html = '';
+
+            wordList.forEach((item, index) => {
+
+                html += '<p>'
+                    + String(index + 1) + '. '
+                    + item.word + ' - ' + item.mean
+                    + '<button onclick="deleteWord(' + index + ')">ลบ</button>'
+                    + '</p>';
+
+            });
+
+            document.getElementById('dict').innerHTML = html;
+        }
+
+
+        function deleteWord(index) {
+
+            let wordList = JSON.parse(localStorage.getItem('wordList')) || [];
+
+            // ลบข้อมูลตามตำแหน่ง
+            wordList.splice(index, 1);
+
+            // บันทึกกลับลง localStorage
+            localStorage.setItem('wordList', JSON.stringify(wordList));
+
+            // แสดงข้อมูลใหม่
+            showWord();
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Moo Deng's Daily Activities</h1>
+    <ul id="listact"></ul>
+
+    <script>
+        let acts = [
+            "Wakes up for a bath and waits for Mom to eat breakfast.",
+            "Walks around, showing off before heading to the water for a nap.",
+            "Takes a nap in the water.",
+            "Might get up for a stroll or a nap on land.",
+            "Naps on land.",
+            "Naps in the water again.",
+            "Mom gets out of the water for dinner while Moo Deng naps.",
+            "Mom eats grass while Moo Deng waits, occasionally running a bit, followed by a long nap until evening.",
+            "Plays with Mom in the water.",
+            "Drinks milk and playfully disturbs Mom.",
+            "Sleeps soundly for hours."
+        ];
+
+        let list = document.getElementById("listact");
+        acts.forEach(function (act) {
+            let li = document.createElement("li");
+            li.textContent = act;
+            list.appendChild(li);
+        });
+
+        let person = {
+            name: "Alan",
+            age: 35,
+            hobby: "painting",
+            salary: 15000
+        };
+
+        document.write("Name: " + person.name + "<br>");
+        document.write("Age: " + person.age + "<br>");
+        document.write("Hobby: " + person.hobby + "<br>");
+        document.write("Salary: " + person.salary + "<br>");
+
+        function validateForm() {
+            let fname = document.getElementById("FirstName").value;
+            if (fname.length < 3) {
+                alert("Firstname must be at least 3 characters");
+                return false;
+            }
+
+            let lname = document.getElementById("LastName").value;
+            if (lname.length < 3) {
+                alert("Lastname must be at least 3 characters");
+                return false;
+            }
+
+            let address = document.getElementById("Address").value;
+            if (address.trim() === "") {
+                alert("Address must be filled out");
+                return false;
+            }
+
+            let country = document.getElementById("Country").value;
+            if (country == "00") {
+                alert("Country must be selected");
+                return false;
+            }
+
+            alert("Form validated successfully!");
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>
