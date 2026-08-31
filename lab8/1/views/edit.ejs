@@ -1,0 +1,39 @@
+<!-- edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+    <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+    <h1>แก้ไขข้อมูลหนังสือ 🖋️</h1>
+    <form action="/edit/<%= data[0].book_id %>" method="post">
+        <label for="book_id">ID: </label><br>
+        <input type="text" name="book_id" value="<%= data[0].book_id %>"><br>
+
+        <label for="book_name">ชื่อหนังสือ: </label><br>
+        <input type="text" name="book_name" value="<%= data[0].book_name %>"><br>
+
+        <label for="author">ผู้แต่ง: </label><br>
+        <input type="text" name="author" value="<%= data[0].author %>"><br>
+
+        <label for="category">หมวดหมู่: </label><br>
+        <input type="text" name="category" value="<%= data[0].category %>"><br>
+
+        <label for="price">ราคา: </label><br>
+        <input type="number" name="price" value="<%= data[0].price %>"><br>
+
+        <label for="stock">จำนวนในสต๊อก: </label><br>
+        <input type="number" name="stock" value="<%= data[0].stock %>"><br>
+
+        <div class="button_form_submit">
+            <a style="padding: 15px 40px;" href="/">ยกเลิก</a>
+            <button style="padding: 15px 30px;" type="submit">บันทีกการแก้ไข</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

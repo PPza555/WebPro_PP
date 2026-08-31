@@ -1,0 +1,26 @@
+
+create table student_score (
+	ID varchar(10) primary key,
+    Name varchar(100),
+    Department varchar(50),
+    Mathematics float,
+    Biology float,
+    Physics float,
+    Calculus float,
+    Economics float
+);
+
+insert into student_score (ID, Name, Department, Mathematics, Biology, Physics, Calculus, Economics)
+values 
+('S001','Ananda Chai','Engineering',85,78,92,88,74),
+('S002','Supaporn Lek','Law',72,69,65,70,90),
+('S003','Krit Phong','Science',91,84,89,95,68),
+('S004','Napaporn Dee','Mathematics',88,76,82,90,71),
+('S005','Somchai Jai','Law',67,73,70,65,88),
+('S006','Chanakarn Noi','Engineering',79,81,85,80,77),
+('S007','Prasert Mee','Science',92,88,90,94,69),
+('S008','Wilawan Fon','Law',70,68,66,72,91),
+('S009','Thitipong Rak','Mathematics',86,80,83,89,73),
+('S010','Chutima Orn','Science',90,85,87,93,70);
+
+select * from student_score

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>The most popular albums</h1>
+
+    <div class="playlist">
+        <% data.forEach(item => { %>
+            <div class="card">
+                <img src="<%= item.album_cover %>">
+                <h2><%= item.song %></h2>
+                <p><b>Album:</b> <%= item.album %> (<%= item.year %>)</p>
+                <p><b>Artist:</b> <%= item.artist %></p>
+                <p><b>Genre:</b> <%= item.genre %></p>
+        <% }); %>
+        
+    </div>
+</body>
+</html>

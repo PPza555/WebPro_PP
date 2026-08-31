@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>views student score</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 90%;
+            margin: auto;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px black solid;
+            padding: 5px 10px;
+            text-align: left;
+        }
+        th {
+            background-color: lightskyblue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>views student score</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Mathematics</th>
+                <th>Biology</th>
+                <th>Physics</th>
+                <th>Calculus</th>
+                <th>Economics</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((item)=>{ %>
+            <tr>
+                <td><%= item.ID %></td>
+                <td><%= item.Name %></td>
+                <td><%= item.Department %></td>
+                <td><%= item.Mathematics %></td>
+                <td><%= item.Biology %></td>
+                <td><%= item.Physics %></td>
+                <td><%= item.Calculus %></td>
+                <td><%= item.Economics %></td>
+
+                <% }); %>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

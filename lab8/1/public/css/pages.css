@@ -1,0 +1,43 @@
+body {
+    width: 90%;
+    margin: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+label {
+    font-size: 20px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 8px 53px;
+    outline: none;
+}
+
+.button_form_submit {
+    display: flex;
+    gap: 20px;
+
+}
+
+.button_form_submit a {
+    background-color: tomato;
+    padding: 15px 50px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.button_form_submit button {
+    background-color: chartreuse;
+    padding: 15px 50px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.button_form_submit button:focus {
+    outline: none;
+}

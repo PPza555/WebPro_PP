@@ -1,0 +1,43 @@
+<!-- add.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add</title>
+    <link rel="stylesheet" href="/css/pages.css">
+</head>
+
+<body>
+    <h1>เพิ่มหนังสือใหม่ 📚</h1>
+    <form action="/add" method="post">
+        <label for="book_id">ID: </label><br>
+        <input type="text" name="book_id" 
+        value="<%= data.length === 0 ? 'B0001' : 'B' + String(Number(data[data.length - 1].book_id.substring(1)) + 1).padStart(4, '0') %>"><br>
+
+        <label for="book_name">ชื่อหนังสือ: </label><br>
+        <input type="text" name="book_name"><br>
+
+        <label for="author">ผู้แต่ง: </label><br>
+        <input type="text" name="author"><br>
+
+        <label for="category">หมวดหมู่: </label><br>
+        <input type="text" name="category"><br>
+
+        <label for="price">ราคา: </label><br>
+        <input type="number" name="price"><br>
+
+        <label for="stock">จำนวนในสต๊อก: </label><br>
+        <input type="number" name="stock" ><br>
+
+        <div class="button_form_submit">
+            <a href="/">ยกเลิก</a>
+            <button type="submit">บันทึก</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
